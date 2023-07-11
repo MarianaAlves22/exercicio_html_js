@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário</h1>
+        <br>
+        <h3>Preencha o formulário abaixo</h3>
+        <form id="form-formulario">
+            <input type="number" id="campoA" required placeholder=" Valor A">
+            <p class="error-message">
+                O valor A é maior que B
+            </p>
+            <input type="number" id="campoB" required placeholder="Valor B">
+            <button id="btn-enviar" type="submit">Enviar</button>
+        </form>
+        <p class="success-message"></p>
+    </div> 
+    <script src="./main.js"></script>
+</body>
+</html>
