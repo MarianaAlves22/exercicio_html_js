@@ -12,6 +12,7 @@ form.addEventListener('submit', function(e){
     var campoB = parseFloat(document.getElementById('campoB').value);
 
     const mensagemSucesso = `Está correto, o valor B: <b>${campoB}</b> é maior que o valor A: <b>${campoA}</b>`;
+    const mensagemError = `O valor A: <b>${campoA}</b> é maior que o valor B: <b>${campoB}</b> tente de novo`;
 
     formEValido = validaFormulario(campoA, campoB)
     if (formEValido) {
@@ -22,8 +23,9 @@ form.addEventListener('submit', function(e){
         campoA.value = '';
         campoB.value = '';
     } else {
-        campoA.style.border = '1px solid red';
-        document.querySelector('.error-message').style.display = 'block';
+        const containerMensagemError = document.querySelector('.error-message');
+        containerMensagemError.innerHTML = mensagemError;
+        containerMensagemError.style.display = 'block';
     }
 })
 
